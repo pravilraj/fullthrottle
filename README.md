@@ -8,7 +8,7 @@ install required libraries from requirements.txt
 pip3 install -r requirements.txt
 ```
 
-# URLS
+## URLS
 For getting data
 ```bash
 http://localhost:8000/users/data/
