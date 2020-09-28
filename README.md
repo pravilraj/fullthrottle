@@ -10,3 +10,4 @@ pip3 install -r requirements.txt
 
 # Screenshots
 ![](images/Screenshot1.png)
+![](images/Screenshot2.png)
