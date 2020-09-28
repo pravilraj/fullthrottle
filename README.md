@@ -13,8 +13,32 @@ For getting data
 ```bash
 http://localhost:8000/users/data/
 ```
-for add or update data
+For post method (Login data for each user)
+```bash
+http://localhost:8000/users/logindata/
+```
+Body of request
+```bash
+{
+  "start_time": "2016-10-04T19:00:00+0200",
+  "end_time": "2016-10-04T19:00:00+0200",
+  "user": "04149fb6b1"
+}
+```
 
+For creating members
+```bash
+http://localhost:8000/users/data/
+```
+body of the request
+```bash
+  {
+  "password" : "test@12345",
+  "real_name": "test4",
+  "tz": "Pacific/Apia"
+  }
+```
+For add or update data using Django-admin
 ```bash
 http://localhost:8000/admin
 ```
