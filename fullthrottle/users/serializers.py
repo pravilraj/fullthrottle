@@ -6,24 +6,24 @@ from .models import *
 class LoginDataSerializer(serializers.ModelSerializer):
 	
 	class Meta:
-
+		# bind serializer with model
 		model = LoginData
+		# specify the fields from Login data model
 		fields = ['start_time','end_time',]
 
 
 class UserSerializer(serializers.ModelSerializer):
+	# create nested serializer and append login data to activity_periods
 	activity_periods = LoginDataSerializer(read_only = True, many=True)
 
 	class Meta:
+		# get user model
 		model = get_user_model()
-		fields = [
-		'id',
-		'real_name',
-		'tz',
-		'activity_periods',
-		]
+		# specify the fields from Login data model
+		fields = ['id', 'real_name', 'tz', 'activity_periods',]
 
 
+# Post serializer for login Data
 class LoginDataPOSTSerializer(serializers.ModelSerializer):
 	
 	class Meta:
