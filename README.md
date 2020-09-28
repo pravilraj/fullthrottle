@@ -1,4 +1,4 @@
-# fullthrottle
+## Fullthrottle labs
 Project for creating members and login data
 
 ## Installation
