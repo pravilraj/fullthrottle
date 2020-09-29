@@ -18,7 +18,7 @@ For getting data
 ```bash
 http://localhost:8000/users/data/
 ```
-For post method (Login data for each user)
+For post method (create login data for each user)
 ```bash
 http://localhost:8000/users/logindata/
 ```
