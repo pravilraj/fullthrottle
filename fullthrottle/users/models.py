@@ -13,14 +13,14 @@ class CustomUser(AbstractUser):
 	# getting all timezones
 	TIMEZONES = tuple(zip(pytz.all_timezones, pytz.all_timezones))
 	# creating fields
-	real_name = models.CharField(blank=True, max_length=100)
+	real_name = models.CharField(blank=True, max_length=100, unique=True)
 	tz = models.CharField(max_length=32, choices=TIMEZONES, default='UTC')
 	# generating random 10 digit id
 	id = models.CharField(primary_key=True, default=uuid.uuid4().hex[:10], editable=False, max_length=10)
 	username = None
-	# use Id as username
-	USERNAME_FIELD = 'id'
-	REQUIRED_FIELDS = []
+	# use real name as username
+	USERNAME_FIELD = 'real_name'
+	REQUIRED_FIELDS = ['email']
 	# mapping custom manager to user
 	objects = CustomUserManager()
 
