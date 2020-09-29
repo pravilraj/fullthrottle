@@ -8,6 +8,11 @@ install required libraries from requirements.txt
 pip3 install -r requirements.txt
 ```
 
+# dump data to database
+```bash
+python manage.py loaddata db.json 
+```
+
 ## URLS
 For getting data
 ```bash
@@ -33,8 +38,8 @@ http://localhost:8000/users/data/
 body of the request
 ```bash
   {
-  "password" : "test@12345",
-  "real_name": "test4",
+  "password" : "test@1234",
+  "real_name": "test3",
   "tz": "Pacific/Apia"
   }
 ```
@@ -42,8 +47,8 @@ For add or update data using Django-admin
 ```bash
 http://localhost:8000/admin
 ```
-Username : PRAVI@GMAIL.COM
-password : 1234
+Username : test
+password : test@1234
 
 # Screenshots
 ![](images/Screenshot1.png)
