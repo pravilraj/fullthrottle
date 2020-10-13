@@ -75,6 +75,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'fullthrottle.wsgi.application'
 
+#Deployment
+SECURE_HSTS_SECONDS = 86400  # 1 day
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"
+CSRF_COOKIE_SECURE = True #to avoid transmitting the CSRF cookie over HTTP accidentally.
+SESSION_COOKIE_SECURE = True
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
